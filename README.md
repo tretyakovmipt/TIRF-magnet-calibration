@@ -36,7 +36,7 @@ $$
 \mathbf{B} =\mathbf{B}_0 + \begin{bmatrix} 	\dfrac{\partial B_x}{\partial V_1} & \dfrac{\partial B_x}{\partial V_2} & \dfrac{\partial B_x}{\partial V_3} \\ \\
 \dfrac{\partial B_y}{\partial V_1} & \dfrac{\partial B_y}{\partial V_2} & \dfrac{\partial B_y}{\partial V_3}\\ \\
 	\dfrac{\partial B_z}{\partial V_1} & \dfrac{\partial B_z}{\partial V_2} & \dfrac{\partial B_z}{\partial V_3}\\
-	\end{bmatrix}\begin{bmatrix}V_1\\ V_2\\ V_3 \end{bmatrix} = \mathbf{B}_0 + \hat{M}\mathbf{V},
+	\end{bmatrix}\begin{bmatrix} V_1 \\\ V_2 \\\ V_3  \end{bmatrix} = \mathbf{B}_0 + \hat{M}\mathbf{V},
 $$
 
 where each partial derivative in the matrix is just a fancy way to express the proportionality coefficient between the corresponding field component and the voltage and is the same as the slope of the B-vs-V plot. As a result, in order to produce field B, we need to apply the set of voltage values given by
