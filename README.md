@@ -2,7 +2,7 @@ Here I assembled essential information on calibrating the electromagnet (EM) for
 
 In the experiment, we use [GMW 5204 Vector Projected Field electromagnet](https://gmw.com/product/5204/).
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3af555d0-7160-4b70-9477-b4f686b4f298/Untitled.png)
+![Fig. 1](fig1.png)
 
 The company does not provide much information on EM principle, but there is some information in [this recent paper](https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.033040).
 
@@ -10,7 +10,7 @@ According to this paper, if I understand correctly, EM has three poles, each pro
 
 The magnetic field is linear between -1000 and 1000 Oe, or -100 and 100 mT, and shows non-linearities at higher fields.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9173d44d-69ba-4b80-9d3a-d61b5102a002/Untitled.png)
+![Fig. 2](fig2.png)
 
 The EM manufacturer did not provide any information on how to calibrate the magnet, so we needed to figure it out ourselves. In the paper, they employed a simple artificial neural network as the calibration. For our experiment, we don’t need strong magnetic fields, so we might get with the linear regime. In this case, the calibration is rather simple, and I describe it below.
 
