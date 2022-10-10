@@ -50,3 +50,26 @@ We call $\hat{M}^{-1}$ a calibration matrix. In order to find the calibration ma
 ## Non-linear case.
 
 In the non-linear case, the above approach does not work, so the simplest solution is to use deep learning. We’ll need much data for training and validation including the data where all voltages are applied simultaneously.
+***
+
+# Repository content
+
+I decided to separate data generation calibration and testing into separate files as if it was a real experiment.
+
+[generate_field.ipynb](https://github.com/tretyakovmipt/TIRF_magnet_calibration/blob/main/generate_field.ipynb) generates a data set with corresponding voltage and magnetic field values.
+
+[linear_calibration.ipynb](https://github.com/tretyakovmipt/TIRF_magnet_calibration/blob/main/linear_calibration.ipynb) does linear regression of linear B_vs_V data and creates the calibration matrix.
+
+[nonlinear_calibration.ipynb](https://github.com/tretyakovmipt/TIRF_magnet_calibration/blob/main/nonlinear_calibration.ipynb) applies deep learning to non-linear B_vs_V data.
+
+[test.ipynb](https://github.com/tretyakovmipt/TIRF_magnet_calibration/blob/main/test.ipynb) tests both cases on creating a rotating field.
+
+data/[full_calibration_set.csv](https://github.com/tretyakovmipt/TIRF_magnet_calibration/blob/main/data/full_calibration_set.csv) - full set for non-linear calibration via deep learning.
+
+data/[individual_calibration_set.csv](https://github.com/tretyakovmipt/TIRF_magnet_calibration/blob/main/data/individual_calibration_set.csv) - data set with only one voltage applied at a time.
+
+data/[lin_cal_mat.csv](https://github.com/tretyakovmipt/TIRF_magnet_calibration/blob/main/data/lin_cal_mat.csv) - calibration matrix obtained in the linear case.
+
+data/[model.h5](https://github.com/tretyakovmipt/TIRF_magnet_calibration/blob/main/data/model.h5) - neural network trained on the non-linear data.
+
+data/[validation_set.csv](https://github.com/tretyakovmipt/TIRF_magnet_calibration/blob/main/data/validation_set.csv) - validation set with non-linear data for deep learning
