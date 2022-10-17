@@ -1,4 +1,4 @@
-Here I assembled essential information on calibrating the electromagnet (EM) for the TIRF experiment. When I say calibration, I refer to the relationship between the applied voltages and the resulting magnetic field vector. In particular, we need to know what voltage values we need to apply in order to create a desired magnetic field. For more information, especially numerical simulations, please see my dedicated [GitHub repository](https://github.com/tretyakovmipt/TIRF_magnet_calibration/settings).
+Here I assembled essential information on calibrating the electromagnet (EM) for the TIRF experiment. When I say calibration, I refer to the relationship between the applied voltages and the resulting magnetic field vector. In particular, we need to know what voltage values we need to apply in order to create a desired magnetic field.
 
 In the experiment, we use [GMW 5204 Vector Projected Field electromagnet](https://gmw.com/product/5204/).
 
