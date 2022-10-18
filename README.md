@@ -50,6 +50,11 @@ We call $\hat{M}^{-1}$ a calibration matrix. In order to find the calibration ma
 ## Non-linear case.
 
 In the non-linear case, the above approach does not work, so the simplest solution is to use deep learning. We’ll need much data for training and validation including the data where all voltages are applied simultaneously.
+
+This is the model I ended up with:
+
+
+![Fig. 3](model.png)
 ***
 
 # Repository content
