@@ -1,18 +1,18 @@
-Here I assembled essential information on calibrating the electromagnet (EM) for the TIRF experiment. When I say calibration, I refer to the relationship between the applied voltages and the resulting magnetic field vector. In particular, we need to know what voltage values we need to apply in order to create a desired magnetic field.
+Here I assembled essential information on calibrating the electromagnet (EM) for the TIRF experiment. When I say calibration, I refer to the relationship between the applied voltages and the resulting magnetic field vector. In particular, we need to know what voltage values we need to apply in order to create a desired magnetic field. For the case of a linear relationship between the applied voltage and the created magnetic field, I’ve come up with an elegant calibration method requiring just a handful of data.
 
 In the experiment, we use [GMW 5204 Vector Projected Field electromagnet](https://gmw.com/product/5204/).
 
 ![Fig. 1](fig1.png)
 
-The company does not provide much information on EM principle, but there is some information in [this recent paper](https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.033040).
+The company does not provide much information on the EM principle, but there is some information in [this recent paper](https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.033040).
 
-According to this paper, if I understand correctly, EM has three poles, each provided by a coil wrapped around a ferromagnetic core. The poles are located in the same plain at the same distance from the axis of symmetry, and their position vectors are at $120^0$ with respect to each other. By applying a voltage to each pole, we can control the magnetic field magnitude and direction.
+According to this paper, EM has three poles, each provided by a coil wrapped around a ferromagnetic core. The poles are located in the same plain at the same distance from the axis of symmetry, and their position vectors are at $120^0$ with respect to each other. We can control the magnetic field magnitude and direction by applying a voltage to each pole.
 
 The magnetic field is linear between -1000 and 1000 Oe, or -100 and 100 mT, and shows non-linearities at higher fields.
 
 ![Fig. 2](fig2.png)
 
-The EM manufacturer did not provide any information on how to calibrate the magnet, so we needed to figure it out ourselves. In the paper, they employed a simple artificial neural network as the calibration. For our experiment, we don’t need strong magnetic fields, so we might get with the linear regime. In this case, the calibration is rather simple, and I describe it below.
+The EM manufacturer did not provide any information on calibrating the magnet, so we needed to figure it out ourselves. In the paper, they employed a simple artificial neural network trained on "300 000 current combinations” for the calibration. We don’t need strong magnetic fields for our experiment, so we might get by with the linear regime. In this case, the calibration does not require that much data and can be done neatly, as described below.
 
 ## Warning!
 
@@ -49,7 +49,7 @@ We call $\hat{M}^{-1}$ a calibration matrix. In order to find the calibration ma
 
 ## Non-linear case.
 
-In the non-linear case, the above approach does not work, so the simplest solution is to use deep learning. We’ll need much data for training and validation including the data where all voltages are applied simultaneously.
+In the non-linear case, the above approach does not work, so the simplest solution is to use deep learning. We’ll need much data for training and validation, including the data where all voltages are applied simultaneously.
 
 This is the model I ended up with:
 
