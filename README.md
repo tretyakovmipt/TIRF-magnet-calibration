@@ -58,7 +58,7 @@ This is the model I ended up with:
 ***
 
 # Results
-We tested out our approach in real life and it works! For example, we can created a rotating magnetic field.
+For the linear case, we tested out our approach in real life and it works! For example, we can created a rotating magnetic field.
 ![Fig. 4](fig3.png)
 
 # Repository content
