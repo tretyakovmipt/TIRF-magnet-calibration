@@ -57,6 +57,10 @@ This is the model I ended up with:
 ![Fig. 3](model.png)
 ***
 
+# Results
+We tested out our approach in real life and it works! For example, we can created a rotating magnetic field.
+![Fig. 4](fig3.png)
+
 # Repository content
 
 I decided to separate data generation calibration and testing into separate files as if it was a real experiment.
